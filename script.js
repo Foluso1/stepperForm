@@ -56,15 +56,3 @@ thisLis.forEach((li, i) => {
         });
     })
 });
-
-// submit.addEventListener("click", (e) => {
-//     e.target.parentNode.parentNode.classList.add("list");
-//     e.preventDefault();
-//     // if (submit.value === "") {
-//     //     console.log("hey");
-//     //     console.log(submit.value);
-//     //     alert("Please, enter a value");
-//     // } else {
-//     //     alert("clicked");
-//     // }
-// })
