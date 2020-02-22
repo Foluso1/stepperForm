@@ -15,6 +15,20 @@ thisLis.forEach((li, i) => {
     buttonsArr.forEach((a, j) => {
         let thisButton = buttons[j];
 
+        input[i].addEventListener("keypress", (e) => {
+            if (e.key == "Enter") {
+                e.preventDefault();
+                let abc = thisLi.getElementsByTagName("div")[0];
+                if (input[i].value === "") {
+                    alert("Please, enter a value");
+                } else {
+                    abc.classList.add("invisible");
+                    let nextDiv = lis[i+1].getElementsByTagName("div")[0];
+                    console.log(nextDiv);
+                    nextDiv.classList.remove("invisible")
+                }
+            }
+        })
         thisButton.addEventListener("click", (e) => {
             e.preventDefault();
             let abc = thisLi.getElementsByTagName("div")[0];
