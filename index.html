@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Stepper Form</title>
+</head>
+<body>
+    <div class="container">
+        <header><h1>Stepper Form</h1></header>
+        <br>
+        <main>
+            <form class="form-group" action="" method="POST">
+                <ul>
+                    <li class="m-4">
+                        <label for="firstName">First Name:</label>
+                        <div class="">
+                            <input class="col-md-6 form-control" type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                            <button style="display: none;" class="prev btn btn-sm btn-outline-primary">Previous</button><button class="next m-2 btn btn-sm btn-outline-primary">Next</button>
+                        </div>
+                    </li>
+
+                    <li class="m-4">
+                        <label for="lastName">Last Name:</label>
+                        <div class="invisible">
+                            <input class="col-md-6 form-control" type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                            <button class="prev btn btn-sm btn-outline-primary">Previous</button>&nbsp;&nbsp;<button class="next m-2 btn btn-sm btn-outline-primary">Next</button>
+                        </div>
+                    </li>
+
+                    <li class="m-4">
+                        <label for="lastName">Last Name:</label>
+                        <div class="invisible">
+                            <input class="col-md-6 form-control" type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                            <button class="prev btn btn-sm btn-outline-primary">Previous</button>&nbsp;&nbsp;<button class="next m-2 btn btn-sm btn-outline-primary">Next</button>
+                        </div>
+                    </li>
+
+                    <li class="m-4">
+                        <label for="lastName">Last Name:</label>
+                        <div class="invisible">
+                            <input class="col-md-6 form-control" type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                            <button class="prev btn btn-sm btn-outline-primary">Previous</button>&nbsp;&nbsp;<button class="next m-2 btn btn-sm btn-outline-primary">Next</button>
+                        </div>
+                    </li>
+                    
+                    <li class="m-4">
+                        <label for="email">Email Address:</label>
+                        <div class="invisible">
+                            <input class="col-md-6 form-control" type="email" id="email" name="email" placeholder="Email Address" required>
+                            <button class="prev m-2 btn btn-sm btn-outline-primary">Previous</button>&nbsp;&nbsp;<button style="display: none;" class="next btn btn-sm btn-outline-primary">Next</button><input class="submit btn btn-md btn-outline-primary" type="submit">
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- <br> -->
+                <div class="col-md-7 text-center">
+                </div>
+            </form>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

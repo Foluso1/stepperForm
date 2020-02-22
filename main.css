@@ -1,0 +1,21 @@
+.list{
+    display: block;
+}
+
+.list::before {
+    content: "";
+    background-image: url("checkmark.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    /* padding-top: -10px; */
+    margin-right: 5px;
+    margin-left: -30px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.invisible {
+    visibility: hidden;
+    position: absolute;
+}
