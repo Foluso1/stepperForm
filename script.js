@@ -1,10 +1,7 @@
 const lis = document.getElementsByTagName("li");
 const submit = document.querySelector("input[type=submit]")
 const input = document.querySelectorAll("input");
-console.log(input);
-let inputArr = Array.from(input);
 let thisLis = Array.from(lis);
-
 
 
 thisLis.forEach((li, i) => {
@@ -12,23 +9,30 @@ thisLis.forEach((li, i) => {
     let buttons = thisLi.getElementsByTagName("button");
     let buttonsArr = Array.from(buttons);
 
-    buttonsArr.forEach((a, j) => {
-        let thisButton = buttons[j];
-
-        input[i].addEventListener("keypress", (e) => {
-            if (e.key == "Enter") {
-                e.preventDefault();
-                let abc = thisLi.getElementsByTagName("div")[0];
-                if (input[i].value === "") {
-                    alert("Please, enter a value");
+    input[i].addEventListener("keypress", (e) => {
+        if (e.key == "Enter") {
+            e.preventDefault();
+            let thisDiv = thisLi.getElementsByTagName("div")[0];
+            if (input[i].value === "") {
+                alert("Please, enter a value");
+            } else {
+                if (i == (thisLis.length - 1)) {
+                    thisLi.classList.add("list");
+                    alert("To submit");
                 } else {
-                    abc.classList.add("invisible");
-                    let nextDiv = lis[i+1].getElementsByTagName("div")[0];
+                    thisDiv.classList.add("invisible");
+                    let nextDiv = lis[i + 1].getElementsByTagName("div")[0];
                     console.log(nextDiv);
-                    nextDiv.classList.remove("invisible")
+                    thisLi.classList.add("list");
+                    nextDiv.classList.remove("invisible");
                 }
             }
-        })
+        }
+    });
+
+    buttonsArr.forEach((a, j) => {
+        let thisButton = buttons[j];
+        
         thisButton.addEventListener("click", (e) => {
             e.preventDefault();
             let abc = thisLi.getElementsByTagName("div")[0];
